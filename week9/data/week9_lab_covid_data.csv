@@ -23,11 +23,11 @@ Benin,Africa,13
 Bermuda,North America,2183
 Bhutan,Asia,27
 Bolivia,South America,1833
-Bosnia And Herzegovina,Europe,4866
+Bosnia and Herz.,Europe,4866
 Botswana,Africa,1102
 Brazil,South America,3087
 British Virgin Islands,North America,2026
-Brunei Darussalam,Asia,494
+Brunei,Asia,494
 Bulgaria,Europe,5407
 Burkina Faso,Africa,17
 Burundi,Africa,3
@@ -37,7 +37,7 @@ Cameroon,Africa,69
 Canada,North America,1049
 Caribbean Netherlands,North America,1312
 Cayman Islands,North America,417
-Central African Republic,Africa,23
+Central African Rep.,Africa,23
 Chad,Africa,11
 Channel Islands,Europe,978
 Chile,South America,2972
@@ -54,8 +54,8 @@ Croatia,Europe,3925
 Cuba,North America,754
 Curacao,North America,1663
 Cyprus,Asia,843
-Czech Republic,Europe,3745
-Democratic Republic Of The Congo,Africa,14
+Czechia,Europe,3745
+Dem. Rep. Congo,Africa,14
 Denmark,Europe,1078
 Djibouti,Africa,186
 Dominica,North America,871
@@ -63,7 +63,7 @@ Dominican Rep.,North America,396
 Ecuador,South America,1963
 Egypt,Africa,232
 El Salvador,North America,631
-Equatorial Guinea,Africa,123
+Eq. Guinea,Africa,123
 Eritrea,Africa,28
 Estonia,Europe,1924
 Ethiopia,Africa,62
@@ -118,7 +118,7 @@ Libya,Africa,913
 Liechtenstein,Europe,2191
 Lithuania,Europe,3442
 Luxembourg,Europe,1664
-Macedonia,Europe,4459
+North Macedonia,Europe,4459
 Madagascar,Africa,48
 Malawi,Africa,131
 Malaysia,Asia,1075
@@ -185,14 +185,14 @@ Singapore,Asia,229
 Sint Maarten,North America,1964
 Slovakia,Europe,3667
 Slovenia,Europe,3184
-Solomon Islands,Australia/Oceania,203
+Solomon Is.,Australia/Oceania,203
 Somaliland,Africa,81
 South Africa,Africa,1660
 South Korea,Asia,462
-South Sudan,Africa,12
+S. Sudan,Africa,12
 Spain,Europe,2254
 Sri Lanka,Asia,765
-State Of Palestine,Asia,1006
+Palestine,Asia,1006
 Sudan,Africa,108
 Suriname,South America,2242
 Swaziland,Africa,1186
@@ -203,12 +203,12 @@ Taiwan,Asia,45
 Tajikistan,Asia,12
 Tanzania,Africa,13
 Thailand,Asia,420
-Timor Leste,Asia,96
+Timor-Leste,Asia,96
 Togo,Africa,32
 Tonga,Australia/Oceania,102
-Trinidad And Tobago,North America,2749
+Trinidad and Tobago,North America,2749
 Tunisia,Africa,2372
-Turkmenistan,Asia,1149
+Turkey,Asia,1149
 Turks And Caicos Islands,North America,907
 Uganda,Africa,74
 United Kingdom,Europe,2578
