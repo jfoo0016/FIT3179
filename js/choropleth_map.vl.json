@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "COVID-19 Deaths (as of 14 May 2022)",
+  "title": "COVID-19 Deaths of each country (as of 14 May 2022)",
   "width": 800,
   "height": 500,
   "data": {
