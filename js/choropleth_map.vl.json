@@ -4,7 +4,7 @@
   "width": 800,
   "height": 500,
   "data": {
-    "url": "https://raw.githubusercontent.com/jfoo0016/FIT3179/main/week9/js/ne_110m.topojson",
+    "url": "https://raw.githubusercontent.com/jfoo0016/FIT3179/main/js/ne_110m.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
   "projection": {"type": "equalEarth"},
@@ -25,7 +25,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/jfoo0016/FIT3179/main/week9/data/week9_lab_covid_data.csv"
+              "url": "https://raw.githubusercontent.com/jfoo0016/FIT3179/main/data/week9_lab_covid_data.csv"
             },
             "key": "country",
             "fields": ["total_deaths_per_1m_population"]
