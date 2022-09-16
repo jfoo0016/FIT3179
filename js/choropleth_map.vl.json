@@ -10,6 +10,17 @@
   "projection": {"type": "equalEarth"},
   "layer": [
     {
+      "data": {"sphere": true},
+      "mark": {"type": "geoshape", "fill": "aliceblue"}
+    },
+    {
+      "data": {
+        "graticule": true
+      },
+      "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5
+      }
+    },
+    {
       "transform": [
         {
           "calculate": "'Data is not available in ' + datum.properties.NAME",
@@ -41,7 +52,7 @@
         "color": {
           "field": "total_deaths_per_1m_population",
           "type": "quantitative",
-          "scale": {"type": "log"},
+          "scale": {"type": "log", "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]},
           "title": "total deaths / 1 million population"
         },
         "tooltip": [
