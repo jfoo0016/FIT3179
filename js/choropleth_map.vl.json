@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "COVID-19 deaths of each country (as of 14 May 2022)",
   "width": 800,
-  "height": 500,
+  "height": 600,
   "data": {
     "url": "https://raw.githubusercontent.com/jfoo0016/FIT3179/main/js/ne_110m.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
