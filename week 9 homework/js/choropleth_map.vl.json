@@ -4,22 +4,11 @@
   "width": 800,
   "height": 500,
   "data": {
-    "url": "https://raw.githubusercontent.com/jfoo0016/FIT3179/main/js/ne_110m.topojson",
+    "url": "https://raw.githubusercontent.com/jfoo0016/FIT3179/main/week%209%20homework/js/ne_110m.topojson",
     "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
   },
   "projection": {"type": "equalEarth"},
   "layer": [
-    {
-      "data": {"sphere": true},
-      "mark": {"type": "geoshape", "fill": "aliceblue"}
-    },
-    {
-      "data": {
-        "graticule": true
-      },
-      "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5
-      }
-    },
     {
       "transform": [
         {
@@ -31,12 +20,19 @@
       "encoding": {"tooltip": {"field": "note"}}
     },
     {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jfoo0016/FIT3179/main/week%209%20homework/js/ne_110m.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+      },
+      "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+    },
+    {
       "transform": [
         {
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/jfoo0016/FIT3179/main/data/week9_lab_covid_data.csv"
+              "url": "https://raw.githubusercontent.com/jfoo0016/FIT3179/main/week%209%20homework/data/week9_lab_covid_data.csv"
             },
             "key": "country",
             "fields": ["total_deaths_per_1m_population"]
@@ -52,7 +48,10 @@
         "color": {
           "field": "total_deaths_per_1m_population",
           "type": "quantitative",
-          "scale": {"type": "log", "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]},
+          "scale": {
+            "type": "log",
+            "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+          },
           "title": "total deaths / 1 million population"
         },
         "tooltip": [
