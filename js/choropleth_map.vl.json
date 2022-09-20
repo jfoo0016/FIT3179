@@ -32,7 +32,7 @@
           "lookup": "properties.NAME",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/jfoo0016/FIT3179/main/wdata/week9_lab_covid_data.csv"
+              "url": "https://raw.githubusercontent.com/jfoo0016/FIT3179/main/data/week9_lab_covid_data.csv"
             },
             "key": "country",
             "fields": ["total_deaths_per_1m_population"]
