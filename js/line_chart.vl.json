@@ -1,0 +1,87 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/jfoo0016/FIT3179_Assignment2/main/data/worldometer_coronavirus_daily_data_cleaned.csv"
+    },
+    "vconcat": [
+      {
+        "title": "Daily COVID-19 cases in the world",
+        "width": 900,
+        "height": 600,
+        "layer": [
+          {
+            "mark": {"type": "line", "point": true},
+            "encoding": {
+              "x": {
+                "field": "date",
+                "type": "temporal",
+                "scale": {"domain": {"param": "brush"}},
+                "axis": {"title": "", "format": "%b %Y"}
+              },
+              "y": {
+                "field": "daily_new_cases",
+                "type": "quantitative",
+                "title": "Cases"
+              },
+              "tooltip": [
+                {"field": "date", "type": "temporal", "title": "Date"},
+                {
+                  "field": "daily_new_cases",
+                  "type": "quantitative",
+                  "title": "Cases"
+                }
+              ]
+            }
+          },
+          {
+            "mark": {"type": "rule", "strokeDash": [2, 2], "size": 2},
+            "encoding": {
+              "y": {"field": "daily_new_cases", "aggregate": "mean"},
+              "color": {"value": "red"}
+            }
+          },
+          {
+            "mark": {
+              "type": "text",
+              "align": "center",
+              "baseline": "middle",
+              "dx": 40,
+              "dy": -30,
+              "fontSize": 13,
+              "fontStyle": "italic"
+            },
+            "encoding": {
+              "text": {"value": ["Average", "daily cases"]},
+              "x": {"value": 0},
+              "y": {"field": "daily_new_cases", "aggregate": "mean"}
+            }
+          }
+        ]
+      },
+      {
+        "width": 900,
+        "height": 200,
+        "title": "Use this line chart to filter data based on date",
+        "mark": "area",
+        "params": [
+          {"name": "brush", "select": {"type": "interval", "encodings": ["x"]}}
+        ],
+        "encoding": {
+          "x": {"field": "date", "type": "temporal", "axis": {"format": "%b %Y"}},
+          "y": {
+            "field": "daily_new_cases",
+            "type": "quantitative",
+            "axis": {"grid": false, "title": "Cases"}
+          },
+          "tooltip": [
+            {"field": "date", "type": "temporal", "title": "Date"},
+            {
+              "field": "daily_new_cases",
+              "type": "quantitative",
+              "title": "Cases"
+            }
+          ]
+        }
+      }
+    ]
+  }
