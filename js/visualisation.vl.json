@@ -388,8 +388,7 @@
       "width": 900,
       "height": 600,
       "title": {
-        "text": "Confirmed cases around the world",
-        "subtitle": "Active, recovered and deaths in terms of total count"
+        "text": "Deaths around the world"
       },
       "projection": {"type": "equalEarth", "translate": [440, 300], "scale":{"expr": "zoom_level"}},
       "layer": [
@@ -441,23 +440,23 @@
                   "url": "https://raw.githubusercontent.com/jfoo0016/FIT3179_Assignment2/main/data/new_daily_data.csv"
                 },
                 "key": "country",
-                "fields": ["date", "country", "cumulative_total_cases", "population"]
+                "fields": ["date", "country", "cumulative_total_deaths", "population"]
               }
             },
             {
               "filter":"Country_selection == null || datum.country == Country_selection"
             },
             {
-              "calculate": "floor(datum.cumulative_total_cases / (datum.population / 1000000))",
-              "as": "total_confirmed_country"
+              "calculate": "floor(datum.cumulative_total_deaths / (datum.population / 1000000))",
+              "as": "total_deaths_country"
             }
           ],
           "encoding": {
             "color": {
-              "field": "total_confirmed_country",
+              "field": "total_deaths_country",
               "type": "quantitative",
               "scale": {"type": "log", "scheme": "goldred"},
-              "title": "total confirmed cases",
+              "title": "total deaths",
               "legend": {
                 "orient": "bottom"
               }
@@ -465,9 +464,9 @@
             "tooltip": [
               {"field": "country", "type": "nominal", "title": "Country"},
               {
-                "field": "total_confirmed_country",
+                "field": "total_deaths_country",
                 "type": "quantitative",
-                "title": "Total confirmed cases"
+                "title": "Total deaths"
               }
             ]
           }
