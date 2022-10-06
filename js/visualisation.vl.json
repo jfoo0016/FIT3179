@@ -507,7 +507,7 @@
     {
       "vconcat": [
         {
-          "title": "Daily COVID-19 deaths in the world",
+          "title": "Daily COVID-19 cases in the world",
           "width": 900,
           "height": 400,
           "layer": [
@@ -518,8 +518,8 @@
                   "aggregate": [
                     {
                       "op": "sum",
-                      "field": "daily_new_deaths",
-                      "as": "sum_daily_new_deaths_each_country"
+                      "field": "daily_new_cases",
+                      "as": "sum_daily_new_cases_each_country"
                     }
                   ],
                   "groupby": ["date"]
@@ -534,16 +534,16 @@
                 },
                 "y": {
                   "aggregate": "sum",
-                  "field": "sum_daily_new_deaths_each_country",
+                  "field": "sum_daily_new_cases_each_country",
                   "type": "quantitative",
-                  "title": "deaths"
+                  "title": "cases"
                 },
                 "tooltip": [
                   {"field": "date", "type": "temporal", "title": "Date"},
                   {
-                    "field": "sum_daily_new_deaths_each_country",
+                    "field": "sum_daily_new_cases_each_country",
                     "type": "quantitative",
-                    "title": "Deaths"
+                    "title": "Cases"
                   }
                 ]
               }
@@ -555,15 +555,15 @@
                       "aggregate": [
                         {
                           "op": "sum",
-                          "field": "daily_new_deaths",
-                          "as": "sum_daily_new_deaths_each_country"
+                          "field": "daily_new_cases",
+                          "as": "sum_daily_new_cases_each_country"
                         }
                       ],
                       "groupby": ["date"]
                     }
               ],
               "encoding": {
-                "y": {"field": "sum_daily_new_deaths_each_country", "aggregate": "mean"},
+                "y": {"field": "sum_daily_new_cases_each_country", "aggregate": "mean"},
                 "color": {"value": "red"}
               }
             },
@@ -582,17 +582,17 @@
                       "aggregate": [
                         {
                           "op": "sum",
-                          "field": "daily_new_deaths",
-                          "as": "sum_daily_new_deaths_each_country"
+                          "field": "daily_new_cases",
+                          "as": "sum_daily_new_cases_each_country"
                         }
                       ],
                       "groupby": ["date"]
                     }
               ],
               "encoding": {
-                "text": {"value": ["Average", "daily deaths"]},
+                "text": {"value": ["Average", "daily cases"]},
                 "x": {"value": 0},
-                "y": {"field": "sum_daily_new_deaths_each_country", "aggregate": "mean"}
+                "y": {"field": "sum_daily_new_cases_each_country", "aggregate": "mean"}
               }
             }
           ]
@@ -613,8 +613,8 @@
                   "aggregate": [
                     {
                       "op": "sum",
-                      "field": "daily_new_deaths",
-                      "as": "sum_daily_new_deaths_each_country"
+                      "field": "daily_new_cases",
+                      "as": "sum_daily_new_cases_each_country"
                     }
                   ],
                   "groupby": ["date"]
@@ -627,16 +627,16 @@
               "axis": {"format": "%b %Y"}
             },
             "y": {
-              "field": "sum_daily_new_deaths_each_country",
+              "field": "sum_daily_new_cases_each_country",
               "type": "quantitative",
-              "axis": {"grid": false, "title": "deaths"}
+              "axis": {"grid": false, "title": "cases"}
             },
             "tooltip": [
               {"field": "date", "type": "temporal", "title": "Date"},
               {
-                "field": "sum_daily_new_deaths_each_country",
+                "field": "sum_daily_new_cases_each_country",
                 "type": "quantitative",
-                "title": "Deaths"
+                "title": "Cases"
               }
             ]
           }
